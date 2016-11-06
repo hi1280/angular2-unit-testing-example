@@ -1,4 +1,4 @@
-import { async, inject, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, inject, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }              from '@angular/platform-browser';
 import { DebugElement,NO_ERRORS_SCHEMA }    from '@angular/core';
 import { FakeHeroService } from './fake-hero.service'
@@ -14,12 +14,12 @@ class RouterStub {
 let comp: DashboardComponent;
 let fixture: ComponentFixture<DashboardComponent>;
 
-describe('2nd tests', () => {
+describe('1st test', () => {
 
   beforeEach( async(() => {
     TestBed.configureTestingModule({
       imports: [HttpModule],
-      declarations: [ DashboardComponent ],
+      declarations: [DashboardComponent],
       schemas:      [NO_ERRORS_SCHEMA],
       providers: [
         { provide: HeroService, useClass: FakeHeroService },
@@ -56,6 +56,7 @@ describe('2nd tests', () => {
         'should nav to HeroDetail for first hero');
       expect(navArgs[1]).toBe(id,
         'should nav to HeroDetail for first hero');
-    }));
+    })
+  );
 
 });
